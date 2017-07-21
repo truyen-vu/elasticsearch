@@ -72,6 +72,9 @@ public class DeDuplicatingTokenFilter extends FilteringTokenFilter {
         this.emitDuplicates = emitDuplicates;
     }
 
+	/**
+	 * blah blah blah
+	 */
     @Override
     protected boolean accept() throws IOException {
         return emitDuplicates || seqAtt.getNumPriorUsesInASequence() < 1;
